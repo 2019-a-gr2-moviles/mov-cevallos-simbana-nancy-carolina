@@ -142,7 +142,7 @@ fun main(args: Array<String>) {
     fecha.year=2000
     //fecha=Date(year:2000, month:6, date:12)
 
-
+    val numerito=Numero(1)
 }
 
 
@@ -177,3 +177,137 @@ fun holaMundoAvanzado(mensaje:Any):Unit {
 fun sumarDosNumeros(numUno: Int, numDos: Int): Int{
     return numUno+numDos
 }
+
+
+class Usuario(val cedula:String){
+
+    public var nombre:String = ""
+    public var apellido:String = ""
+
+    constructor(cedulaM:String,
+                apellido:String) : this(cedulaM) {
+
+        this.apellido = apellido
+
+    }
+}
+
+
+
+class Numero(var numero:Int){
+
+    constructor(numeroString:String):this(numeroString.toInt()){
+        println("CONSTRUCTOR")
+    }
+
+    init {
+        println("INIT")
+        this.numero
+    }
+}
+
+
+
+
+
+
+
+
+
+
+class UsuarioKT(var nombre:String,
+                var apellido: String,
+                private var id:Int,
+                protected var id_:Int){
+
+
+    init {
+        // Escribir codigo
+    }
+
+    public fun hola():String{
+        return this.apellido
+    }
+    private fun hola2(){
+
+    }
+    protected fun hola3(){
+
+    }
+
+    companion object {
+        val gravedad = 10.5
+        fun correr(){
+            println("Estoy corriendo en $gravedad")
+        }
+    }
+
+}
+
+class BaseDeDatos{
+    companion object {
+        val usuarios = arrayListOf(1,2,3)
+        fun agregarUsuario(usuario:Int){
+            this.usuarios.add(usuario)
+        }
+        fun eliminarUsuaruio(usuario:Int){
+            // this.usuarios.
+        }
+    }
+}
+
+
+fun aa(){
+    UsuarioKT.gravedad
+    UsuarioKT.correr()
+}
+
+
+fun a(){
+    var caro = UsuarioKT("a","b",3,2)
+    caro.nombre = "asdasd"
+
+    val caro2 = Usuario("a")
+    caro2.nombre = " "
+    caro2.apellido = " "
+}
+
+
+class A{}
+
+// A.correr()  // Metodo Estatico
+// A.gravedad // Propiedad estatica
+
+abstract class Numeros(var numeroUno:Int,
+                       var numeroDos:Int){
+
+}
+class Suma(numeroUnos:Int,
+           numeroDoss:Int) :
+    Numeros(numeroUnos,numeroDoss){
+
+}
+fun cc(){
+    val a = Suma(1,2)
+    // val b = Numeros(1,2)
+    // val b = Numeros(1,2)
+}
+
+
+fun presley(requerido:Int,
+            opcional:Int =1,
+            nulo:UsuarioKT?){
+    if(nulo != null){
+        nulo.nombre
+    }
+    val nombresito:String? = nulo?.nombre.toString()
+    nulo!!.nombre
+
+
+}
+fun cddd(){
+    presley(requerido = 1, nulo = null) // Named Parameters
+    presley(1,1,null)
+    presley(1,1,null)
+}
+
