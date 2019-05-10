@@ -1,5 +1,0 @@
-package Modelo
-
-class Administrador {
-
-}

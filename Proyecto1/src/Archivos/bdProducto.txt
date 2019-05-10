@@ -1,1 +1,1 @@
-003,jean,negro,10.50;
+1,001,camiseta,s,negro,12.34;1,101,pantalon,md,azul,45.60;

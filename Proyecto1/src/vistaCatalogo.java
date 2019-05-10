@@ -3,8 +3,17 @@ import java.awt.*;
 
 public class vistaCatalogo {
     public  JPanel panelInicio;
-    private JButton buttonAdministrador;
-    private JButton buttonComprador;
+    private JButton ingresarProducto;
+    private JButton eliminarProductoButton;
+    private JButton eliminarCategoríaButton;
+    private JButton editarCategoríaButton;
+    private JButton editarProductoButton;
+    private JButton IngresarCategoria;
+    private JPanel panelCategoria;
+    private JPanel panelProducto;
+    private JLabel labelCategoria;
+    private JLabel labelProducto;
+    private JComboBox comboCategoria;
 
     public  static  void main(String[]args){
         JFrame frame=new JFrame("Catalogo");
@@ -24,5 +33,9 @@ public class vistaCatalogo {
         frame.add(buttonAdministrador);
         frame.add(buttonComprador);
 
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

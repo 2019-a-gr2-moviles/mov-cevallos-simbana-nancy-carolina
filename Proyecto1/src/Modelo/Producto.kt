@@ -1,18 +1,20 @@
 package Modelo
-
+val listaP=ArrayList<Producto>()
 class Producto {
+    var idCategoria:String=""
     var codigo:String=""
-     var descripcion:String=""
-     var color:String=""
-     var precio:String=""
+    var descripcion:String=""
+    var color:String=""
+    var precio:String=""
+    var talla:String=""
 
-    /*constructor(codigo:String,descripcion:String, color:String, precio:String){
+   /* constructor(idCategoria:String,codigo:String,descripcion:String, color:String, precio:String){
         this.codigo=codigo
         this.descripcion=descripcion
         this.color=color
         this.precio=precio
-    }*/
-/*
+    }
+
     fun getCodigo():String{
         return codigo
     }
@@ -43,10 +45,9 @@ class Producto {
 
     fun setPrecio(precio: String){
         this.precio=precio
-    }*/
-
+    }
+*/
     override fun toString(): String {
         return this.codigo.toString()
     }
-
 }
