@@ -1,24 +1,14 @@
 
-import Controlador.CategoriasBD
 import Controlador.ConexionBD
-import Controlador.ProductoBD
 import Modelo.Categoria
 import Modelo.Producto
-import sun.plugin.perf.PluginRollup
 import java.awt.Color
-import java.awt.color.ColorSpace
-import java.io.*
 import javax.swing.*
-import javax.swing.event.ListSelectionEvent
 import javax.swing.table.DefaultTableModel
-import kotlin.coroutines.coroutineContext
-import kotlin.math.tan
 
 var arregloProducto=ArrayList<Producto>()
 var arregloCategoria=ArrayList<Categoria>()
 val escrbiriLeer=ConexionBD()
-val funcionesProducto=ProductoBD()
-val funcionesCategoria=CategoriasBD()
 
 fun main(args: Array<String>) {
 
@@ -56,6 +46,11 @@ fun inicioSesion(){
     val boton1 = buttonAdministrador.apply {
         addActionListener {
             Registro()
+        }
+    }
+    buttonComprador.apply {
+        addActionListener {
+            catalogo()
         }
     }
 }
@@ -127,6 +122,12 @@ fun Registro(){
             RegistroProducto()
         }
     }
+    editarProductoButton.apply {
+        addActionListener {
+            editarProducto()
+        }
+    }
+
 }
 fun RegistroCategoria(){
     val frame = JFrame("CATALOGO")
@@ -144,8 +145,6 @@ fun RegistroCategoria(){
     val botonNuevaCategoria=JButton("Ingresar")
     val botonIngresarProductos=JButton("Ingresar Productos")
     val botonRegresar=JButton("Regresar")
-    val botonNuevoProducto=JButton("Aceptar")
-    val botonLimpiar=JButton("limpiar")
 
     labelTitulo.setBounds(100,10,50,20)
     labelId.setBounds(10, 30, 100, 20)
@@ -155,8 +154,6 @@ fun RegistroCategoria(){
     botonNuevaCategoria.setBounds(350,60,100,20)
     botonIngresarProductos.setBounds(50,100,200,20)
     botonRegresar.setBounds(250,100,100,20)
-
-    botonNuevoProducto.setBounds(10,10,100,20)
 
     panelRegistro.setBounds(0,0,500,150)
     panelProducto.setBounds(0,200,500,300)
@@ -169,8 +166,44 @@ fun RegistroCategoria(){
     panelRegistro.add(botonIngresarProductos)
     panelRegistro.add(botonRegresar)
 
-    panelProducto.add(botonNuevoProducto)
-    panelProducto.add(botonLimpiar)
+    val label2=JLabel("Código")
+    val label3=JLabel("Descripción")
+    val label4=JLabel("talla")
+    val label5=JLabel("Color")
+    val label6=JLabel("Precio")
+    val textCodigo=JTextField()
+    val textTalla=JTextField()
+    val textDescripcion=JTextField()
+    val textColor=JTextField()
+    val textPrecio=JTextField()
+    val buttonAceptar=JButton("Aceptar")
+    val botonNuevoProducto=JButton("Aceptar")
+    val botonVaciar=JButton("limpiar")
+    label2.setBounds(10, 30, 100, 20)
+    textCodigo.setBounds(90,30,200,20)
+    label3.setBounds(10, 50, 100, 20)
+    textDescripcion.setBounds(90,50,200,20)
+    label4.setBounds(10, 70, 100, 20)
+    textTalla.setBounds(90,70,200,20)
+    label5.setBounds(10, 90, 100, 20)
+    textColor.setBounds(90,90,200,20)
+    label6.setBounds(10, 110, 100, 20)
+    textPrecio.setBounds(90,110,200,20)
+    buttonAceptar.setBounds(20,130,100,20)
+    botonVaciar.setBounds(120,130,100,20)
+    panelProducto.add(label2)
+    panelProducto.add(textCodigo)
+    panelProducto.add(label3)
+    panelProducto.add(textDescripcion)
+    panelProducto.add(label4)
+    panelProducto.add(textTalla)
+    panelProducto.add(label5)
+    panelProducto.add(textColor)
+    panelProducto.add(label6)
+    panelProducto.add(textPrecio)
+    panelProducto.add(buttonAceptar)
+
+
     panelProducto.isVisible=false
     panelFondo.add(panelProducto)
     panelFondo.add(panelRegistro)
@@ -203,6 +236,34 @@ fun RegistroCategoria(){
     botonIngresarProductos.apply {
         addActionListener {
             panelProducto.isVisible=true
+        }
+    }
+
+    buttonAceptar.apply {
+        addActionListener {
+            val codigo = textCodigo.text
+            val descripcion = textDescripcion.text
+            val talla = textTalla.text
+            val color = textColor.text
+            val precio = textPrecio.text
+
+            val producto = Producto()
+            producto.idCategoria=textId.text
+            producto.codigo = codigo
+            producto.descripcion = descripcion
+            producto.talla=talla
+            producto.color = color
+            producto.precio = precio
+            //abrir
+            arregloProducto.add(producto)
+            print(arregloProducto)
+            if(escrbiriLeer.EscribiArchivo(arregloProducto)){
+                textCodigo.text=""
+                textDescripcion.text=""
+                textTalla.text=""
+                textColor.text=""
+                textPrecio.text=""
+            }
         }
     }
 
@@ -312,6 +373,236 @@ fun RegistroProducto(){
 
 }
 
+fun editarProducto(){
+    val frame=JFrame("CATALOGO")
+    val panelFondo=JPanel()
+    panelFondo.layout=null
+    val panel=JPanel()
+    panel.layout=null
+    val panel2=JPanel()
+    panel2.layout=null
+    val botonRegresar=JButton("Regresar")
+    panel.background= Color(158,188,202,101)
+    panel2.background=Color(158,188,202,101)
+    panel.setBounds(0,30,250,250)
+    botonRegresar.setBounds(30,350,100,40)
+    val labelCategoria= JLabel("CATEGORIAS")
+    val labelProducto= JLabel("PRODUCTOS")
+    labelCategoria.setBounds(100,10,200,40)
+    labelProducto.setBounds(100,10,200,40)
+
+    val tablaCategorias=JTable(tablaCategorias())
+    tablaCategorias.setBounds(0,0,300,100)
+    tablaCategorias.createDefaultColumnsFromModel()
+    tablaCategorias.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
+    val botonBuscar=JButton("Buscar Producto")
+    botonBuscar.setBounds(10,200,200,20)
+    panel.add(tablaCategorias)
+    panel.add(botonBuscar)
+    panel.add(labelCategoria)
+    panelFondo.add(panel)
+    panelFondo.add(botonRegresar)
+    frame.contentPane = panelFondo
+    frame.setSize(1000, 700)
+    frame.isResizable = false
+    frame.setLocationRelativeTo(null)
+    frame.isVisible = true
+
+    botonRegresar.apply {
+        addActionListener {
+            frame.isVisible=false
+        }
+    }
+
+    botonBuscar.apply {
+        addActionListener {
+            val indice=tablaCategorias.selectedRow
+            val id=arregloCategoria[indice-1].idCategoria
+            var listaAux=ArrayList<Producto>()
+            val lista=arregloProducto.filter { nuevoProducto: Producto ->
+                nuevoProducto.idCategoria ==id }
+            listaAux=lista as ArrayList<Producto>
+            tablaFiltroProductos(listaAux)
+            val tablaProd=JTable(tablaFiltroProductos(listaAux))
+            tablaProd.setBounds(0,0,300,100)
+            tablaProd.createDefaultColumnsFromModel()
+            tablaProd.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
+            val panel2=JPanel()
+            panel2.layout=null
+            panel2.add(tablaProd)
+            panel2.setBounds(270,30,500,200)
+
+            val buttonEditar=JButton("Editar")
+            buttonEditar.setBounds(0,150,100,20)
+            panel2.add(buttonEditar)
+            panelFondo.add(panel2)
+            frame.contentPane=panelFondo
+
+            buttonEditar.apply {
+                addActionListener {
+                    val panelRegistro=JPanel()
+                    panelRegistro.layout=null
+                    val label=JLabel("Registro")
+                    val label2=JLabel("Código")
+                    val label3=JLabel("Descripción")
+                    val label4=JLabel("talla")
+                    val label5=JLabel("Color")
+                    val label6=JLabel("Precio")
+                    val indiceProd=tablaProd.selectedRow
+                    val textCodigo=JTextField()
+                    val textTalla=JTextField()
+                    val textDescripcion=JTextField()
+                    val textColor=JTextField()
+                    val textPrecio=JTextField()
+                    textCodigo.text=listaAux[indiceProd-1].codigo
+                    textTalla.text=listaAux[indiceProd-1].talla
+                    textDescripcion.text=listaAux[indiceProd-1].descripcion
+                    textColor.text=listaAux[indiceProd-1].color
+                    textPrecio.text=listaAux[indiceProd-1].precio
+                    val buttonAceptar=JButton("Aceptar")
+                    val buttonRegresar=JButton("Regresar")
+                    label.setBounds(100,10,100,20)
+                    label2.setBounds(10, 40, 100, 20)
+                    textCodigo.setBounds(90,40,200,20)
+                    label3.setBounds(10, 60, 100, 20)
+                    textDescripcion.setBounds(90,60,200,20)
+                    label4.setBounds(10, 80, 100, 20)
+                    textTalla.setBounds(90,80,200,20)
+                    label5.setBounds(10, 100, 100, 20)
+                    textColor.setBounds(90,100,200,20)
+                    label6.setBounds(10, 130, 100, 20)
+                    textPrecio.setBounds(90,130,200,20)
+                    buttonAceptar.setBounds(20,150,100,20)
+                    buttonRegresar.setBounds(120,150,100,20)
+
+                    panelRegistro.add(label)
+                    panelRegistro.add(label2)
+                    panelRegistro.add(textCodigo)
+                    panelRegistro.add(label3)
+                    panelRegistro.add(textDescripcion)
+                    panelRegistro.add(label4)
+                    panelRegistro.add(textTalla)
+                    panelRegistro.add(label5)
+                    panelRegistro.add(textColor)
+                    panelRegistro.add(label6)
+                    panelRegistro.add(textPrecio)
+                    panelRegistro.add(buttonAceptar)
+                    panelRegistro.setBounds(270,200,400,400)
+                    panelRegistro.background= Color.WHITE
+
+                    panelFondo.add(panelRegistro)
+                    frame.contentPane=panelFondo
+
+                    buttonAceptar.apply {
+                        addActionListener {
+                            val codigo = textCodigo.text
+                            val descripcion = textDescripcion.text
+                            val talla = textTalla.text
+                            val color = textColor.text
+                            val precio = textPrecio.text
+
+                            val producto = Producto()
+                            val fila=tablaCategorias.selectedRow
+                            println(arregloCategoria[fila-1].idCategoria)
+                            producto.idCategoria=arregloCategoria[fila-1].idCategoria
+                            producto.codigo = codigo
+                            producto.descripcion = descripcion
+                            producto.talla=talla
+                            producto.color = color
+                            producto.precio = precio
+                            //abrir
+                            arregloProducto.add(producto)
+                            print(arregloProducto)
+                            if(escrbiriLeer.EscribiArchivo(arregloProducto)){
+                                frame.isVisible=false
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+fun buscarIndiceProducto(codigo:String):Int{
+    var indice:Int=0
+
+    return indice
+}
+
+fun catalogo(){
+    val frame=JFrame("CATALOGO")
+    val panelFondo=JPanel()
+    panelFondo.layout=null
+    val panel=JPanel()
+    panel.layout=null
+    val panel2=JPanel()
+    panel2.layout=null
+    val botonRegresar=JButton("Regresar")
+    panel.background= Color(158,188,202,101)
+    panel2.background=Color(158,188,202,101)
+    panel.setBounds(0,30,250,250)
+    botonRegresar.setBounds(30,200,100,40)
+    val labelCategoria= JLabel("CATEGORIAS")
+    val labelProducto= JLabel("PRODUCTOS")
+    labelCategoria.setBounds(100,10,200,40)
+    labelProducto.setBounds(100,10,200,40)
+
+    val tablaCategorias=JTable(tablaCategorias())
+    tablaCategorias.setBounds(0,0,300,100)
+    tablaCategorias.createDefaultColumnsFromModel()
+    tablaCategorias.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
+    val botonBuscar=JButton("Buscar Producto")
+    botonBuscar.setBounds(10,200,200,20)
+    panel.add(tablaCategorias)
+    panel.add(botonBuscar)
+    panel.add(labelCategoria)
+    panelFondo.add(panel)
+    panelFondo.add(botonRegresar)
+    frame.contentPane = panelFondo
+    frame.setSize(700, 700)
+    frame.isResizable = false
+    frame.setLocationRelativeTo(null)
+    frame.isVisible = true
+
+    botonRegresar.apply {
+        addActionListener {
+            frame.isVisible=false
+        }
+    }
+
+    botonBuscar.apply {
+        addActionListener {
+            val indice=tablaCategorias.selectedRow
+            val id=arregloCategoria[indice-1].idCategoria
+            var listaAux=ArrayList<Producto>()
+            val lista=arregloProducto.filter { nuevoProducto: Producto ->
+                nuevoProducto.idCategoria ==id }
+            listaAux=lista as ArrayList<Producto>
+            tablaFiltroProductos(listaAux)
+            val tablaProd=JTable(tablaFiltroProductos(listaAux))
+            tablaProd.setBounds(0,0,300,100)
+            tablaProd.createDefaultColumnsFromModel()
+            tablaProd.setSelectionMode(ListSelectionModel.SINGLE_SELECTION)
+            val panel2=JPanel()
+            panel2.layout=null
+            panel2.add(tablaProd)
+            panel2.setBounds(270,30,500,200)
+
+            val buttonEditar=JButton("Comprar")
+            buttonEditar.setBounds(0,150,100,20)
+            panel2.add(buttonEditar)
+            panelFondo.add(panel2)
+            frame.contentPane=panelFondo
+
+        }
+    }
+}
+
+
 fun tablaCategorias():DefaultTableModel{
     val tm=DefaultTableModel(arrayOf(arrayOf( "Id","Nombre")), arrayOf("idCategoria", "nombreCategoria"))
     arregloCategoria.forEach{ element ->
@@ -321,6 +612,20 @@ fun tablaCategorias():DefaultTableModel{
     return  tm
 }
 
-fun catalogo(){
+fun tablaProductos():DefaultTableModel{
+    val tm=DefaultTableModel(arrayOf(arrayOf( "Id","codigo","Prenda","talla","color","precio")), arrayOf("idCategoria", "codig","descripcion","talla","color","precio"))
+    arregloProducto.forEach{ element ->
+        var arrayTemp= arrayOf( element.idCategoria,element.codigo,element.descripcion,element.talla,element.color,element.precio)
+        tm.addRow(arrayTemp)
+    }
+    return  tm
+}
 
+fun tablaFiltroProductos(listaTabla:ArrayList<Producto>):DefaultTableModel{
+    val tm=DefaultTableModel(arrayOf(arrayOf( "Id","codigo","Prenda","talla","color","precio")), arrayOf("idCategoria", "codig","descripcion","talla","color","precio"))
+    listaTabla.forEach{ element ->
+        var arrayTemp= arrayOf( element.idCategoria,element.codigo,element.descripcion,element.talla,element.color,element.precio)
+        tm.addRow(arrayTemp)
+    }
+    return  tm
 }

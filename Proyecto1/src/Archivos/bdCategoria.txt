@@ -1,1 +1,1 @@
-1,Desportiva;
+1,Desportiva;2,Casual;

@@ -1,1 +1,1 @@
-1,001,camiseta,s,negro,12.34;1,101,pantalon,md,azul,45.60;
+1,001,camiseta,s,negro,12.34;1,101,pantalon,md,azul,45.60;1,001,camiseta,s,blanca,12.34;2,103,camisa,m,azul,12.00;2,1004,blusa,s,blanca,13.44;1,101,pantaloneta,s,azul,45.60;
