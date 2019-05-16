@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa212cce-187e-4ee2-901b-b782bcc15d9f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/Archivos/bdProducto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/Archivos/bdProducto.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/Controlador/CategoriasBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/Controlador/ProductoBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$$inlined$apply$lambda$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$$inlined$apply$lambda$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$Registro$3$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroCategoria$$inlined$apply$lambda$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroProducto$$inlined$apply$lambda$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroProducto$$inlined$apply$lambda$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroProducto$$inlined$apply$lambda$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$RegistroProducto$$inlined$apply$lambda$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$inicioSesion$boton1$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt$inicioSesion$boton1$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/InicioKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto1/Modelo/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto1/Modelo/Producto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Archivos/bdCategoria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Archivos/bdCategoria.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Archivos/bdProducto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Archivos/bdProducto.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controlador/CategoriasBD.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controlador/ProductoBD.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modelo/Producto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/Producto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/Inicio.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Inicio.kt" afterDir="false" />
-    </list>
+    <list default="true" id="fa212cce-187e-4ee2-901b-b782bcc15d9f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Archivos/bdProducto.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -57,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Vista/Inicio.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
-              <caret line="421" column="44" selection-start-line="421" selection-start-column="38" selection-end-line="421" selection-end-column="44" />
+            <state relative-caret-position="29">
+              <caret line="455" column="47" lean-forward="true" selection-start-line="455" selection-start-column="47" selection-end-line="455" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -255,16 +233,15 @@
       <workItem from="1557392420331" duration="5598000" />
       <workItem from="1557443911766" duration="4566000" />
       <workItem from="1557468879284" duration="20728000" />
-      <workItem from="1557511410224" duration="8803000" />
+      <workItem from="1557511410224" duration="9524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70888000" />
+    <option name="totallyTimeSpent" value="71609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18078668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -276,7 +253,7 @@
       <window_info id="Resources Explorer" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32206118" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32206118" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -450,13 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/Inicio.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="421" column="44" selection-start-line="421" selection-start-column="38" selection-end-line="421" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Producto.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -468,6 +438,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="159" selection-start-column="148" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vista/Inicio.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="455" column="47" lean-forward="true" selection-start-line="455" selection-start-column="47" selection-end-line="455" selection-end-column="47" />
         </state>
       </provider>
     </entry>
