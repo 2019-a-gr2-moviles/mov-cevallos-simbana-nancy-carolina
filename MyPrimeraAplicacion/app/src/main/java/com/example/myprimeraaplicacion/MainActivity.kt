@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
             this,
             ActividadDos::class.java
         )
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("nombre","Carro")
+        intent.putExtra("edad",24)
         startActivity(intent)
 
     }
