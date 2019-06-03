@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
 import android.support.design.widget.Snackbar
+import android.view.View
 import com.example.ejemploparcelable.ListViewActivity
 import com.example.ejemploparcelable.R
 import com.example.ejemploparcelable.Usuario
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
         Snackbar
             .make(view, "Gracias por crear un nuevo usuario", Snackbar.LENGTH_LONG)
-            .setAction("Action", null)
+            .setAction("Action", null).show()
     }
     /*
     fun irAToast(){
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     fun mostrarSnack(view: View, texto:String){
         Snackbar
             .make(view, texto, Snackbar.LENGTH_LONG)
-            .setAction("Action", null)
+            .setAction("Action", null).show()
 
     }
 
