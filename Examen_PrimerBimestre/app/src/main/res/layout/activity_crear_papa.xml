@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CrearPapaActivity" android:background="@mipmap/vertical">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            tools:layout_editor_absoluteY="41dp" tools:layout_editor_absoluteX="66dp"
+            android:id="@+id/text_nombreEquipo"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            tools:layout_editor_absoluteY="122dp" tools:layout_editor_absoluteX="66dp" android:id="@+id/text_liga"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            tools:layout_editor_absoluteY="208dp" tools:layout_editor_absoluteX="66dp"
+            android:id="@+id/text_fechaEquipo"/>
+    <TextView
+            android:text="Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="32dp" android:id="@+id/textView2"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            tools:layout_editor_absoluteY="306dp" tools:layout_editor_absoluteX="66dp" android:id="@+id/text_numeroCampeon"/>
+    <TextView
+            android:text="Liga:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="102dp"
+            tools:layout_editor_absoluteX="32dp" android:id="@+id/textView3"/>
+    <TextView
+            android:text="Fecha de creacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="178dp"
+            tools:layout_editor_absoluteX="25dp" android:id="@+id/textView4"/>
+    <TextView
+            android:text="Numero de copas internacionales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="279dp"
+            tools:layout_editor_absoluteX="25dp" android:id="@+id/textView5"/>
+    <CheckedTextView
+            android:text="campeon Actual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="395dp"
+            tools:layout_editor_absoluteX="32dp" android:id="@+id/text_campeon"/>
+</android.support.constraint.ConstraintLayout>
