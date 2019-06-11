@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     fun iniciarSesion(){
 
+        bdDatos.usuario=text_usuario.text.toString()
         val intentInicio=Intent(this, MenuActivity::class.java)
-        intentInicio.putExtra("usuario",text_usuario.text.toString())
+        intentInicio.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentInicio)
     }
 }

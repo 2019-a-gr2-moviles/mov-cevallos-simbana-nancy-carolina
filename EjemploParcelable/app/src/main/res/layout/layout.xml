@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" android:id="@+id/linear_layout">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="31dp" android:id="@+id/txt_nombre"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp" android:id="@+id/txt_cedula"/>
+    <Button
+            android:text="Accion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btn_accion"/>
+</LinearLayout>

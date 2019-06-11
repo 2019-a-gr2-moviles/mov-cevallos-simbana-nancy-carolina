@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Examen Aplication</string>
+    <string name="text_nombreEquipo">Name</string>
+    <string name="text_liga">Liga</string>
+    <string name="text_fechaEquipo">Creation Date</string>
+    <string name="text_numeroCopas">World Cups</string>
+    <string name="check_campeon">Champion</string>
+    <string name="btn_guardar">Save</string>
+    <string name="btn_eliminar">Delete</string>
+    <string name="btn_actualizar">Update</string>
+    <string name="btn_gestionJugadores">Manage Players</string>
+    <string name="btn_crearJugador">Create Player</string>
+    <string name="btn_gestionPapas">Manage Team</string>
+    <string name="btn_crearPapa">Create Team</string>
+    <string name="text_numCamiseta">T-shirt number</string>
+    <string name="text_nombreCamiseta">T-shirt name</string>
+    <string name="text_nombreJugador">Player name</string>
+    <string name="text_poder">Special Power</string>
+    <string name="text_fechaIngreso">admission date</string>
+    <string name="text_goles">Goals</string>
+    <string name="msg_ingreso">Welcome</string>
+    <string name="msg_guardado">successfully saved</string>
+    <string name="msg_actualizado">successfully updated</string>
+    <string name="msg_eliminado">successfully deleted</string>
+    <string name="tituloEquipo">Teams</string>
+    <string name="tituloJugador">Players</string>
+</resources>

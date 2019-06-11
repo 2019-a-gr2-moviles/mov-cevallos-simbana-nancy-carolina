@@ -8,54 +8,95 @@
         tools:context=".CrearPapaActivity" android:background="@mipmap/vertical">
 
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="270dp"
+            android:layout_height="41dp"
             android:inputType="textPersonName"
             android:ems="10"
-            tools:layout_editor_absoluteY="41dp" tools:layout_editor_absoluteX="66dp"
-            android:id="@+id/text_nombreEquipo"/>
+            android:id="@+id/text_nombreEquipo" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.296"
+            android:layout_marginTop="76dp" app:layout_constraintTop_toTopOf="parent"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="264dp"
+            android:layout_height="47dp"
             android:inputType="textPersonName"
             android:ems="10"
-            tools:layout_editor_absoluteY="122dp" tools:layout_editor_absoluteX="66dp" android:id="@+id/text_liga"/>
+            android:id="@+id/text_liga" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:textSize="18sp" app:layout_constraintHorizontal_bias="0.297"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toBottomOf="@+id/text_nombreEquipo"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="255dp"
+            android:layout_height="60dp"
             android:inputType="date"
             android:ems="10"
-            tools:layout_editor_absoluteY="208dp" tools:layout_editor_absoluteX="66dp"
-            android:id="@+id/text_fechaEquipo"/>
+            android:id="@+id/text_fechaEquipo" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.278"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_liga"/>
     <TextView
-            android:text="Nombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="16dp"
-            tools:layout_editor_absoluteX="32dp" android:id="@+id/textView2"/>
-    <EditText
+            android:text="@string/text_nombreEquipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="@+id/text_nombreEquipo"
+            app:layout_constraintEnd_toEndOf="@+id/text_nombreEquipo" app:layout_constraintHorizontal_bias="0.053"
+            android:textSize="18sp" android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="166dp"
+            android:layout_height="48dp"
             android:inputType="number"
             android:ems="10"
-            tools:layout_editor_absoluteY="306dp" tools:layout_editor_absoluteX="66dp" android:id="@+id/text_numeroCampeon"/>
+            android:id="@+id/text_numeroCopas" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.209" android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/text_fechaEquipo" android:layout_marginTop="64dp"/>
     <TextView
-            android:text="Liga:"
+            android:text="@string/text_liga"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="102dp"
-            tools:layout_editor_absoluteX="32dp" android:id="@+id/textView3"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" app:layout_constraintStart_toStartOf="@+id/text_liga"
+            app:layout_constraintEnd_toEndOf="@+id/text_liga" app:layout_constraintHorizontal_bias="0.048"
+            android:textSize="18sp" android:layout_marginTop="140dp" app:layout_constraintTop_toTopOf="parent"/>
     <TextView
-            android:text="Fecha de creacion"
+            android:text="@string/text_fechaEquipo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="178dp"
-            tools:layout_editor_absoluteX="25dp" android:id="@+id/textView4"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" app:layout_constraintStart_toStartOf="@+id/text_fechaEquipo"
+            app:layout_constraintEnd_toEndOf="@+id/text_fechaEquipo" app:layout_constraintHorizontal_bias="0.0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_fechaEquipo" android:layout_marginBottom="12dp"/>
     <TextView
-            android:text="Numero de copas internacionales"
+            android:text="@string/text_numeroCopas"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="279dp"
-            tools:layout_editor_absoluteX="25dp" android:id="@+id/textView5"/>
-    <CheckedTextView
-            android:text="campeon Actual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="395dp"
-            tools:layout_editor_absoluteX="32dp" android:id="@+id/text_campeon"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" app:layout_constraintStart_toStartOf="@+id/text_numeroCopas"
+            app:layout_constraintEnd_toEndOf="@+id/text_numeroCopas" app:layout_constraintHorizontal_bias="0.009"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_numeroCopas" android:layout_marginBottom="24dp"/>
+    <CheckBox
+            android:text="@string/check_campeon"
+            android:layout_width="115dp"
+            android:layout_height="43dp"
+            android:id="@+id/check_campeon" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.176" android:textSize="18sp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/text_numeroCopas"
+    />
+    <Button
+            android:text="Guardar"
+            android:layout_width="108dp"
+            android:layout_height="53dp"
+            android:id="@+id/btn_guardar" android:background="#3F51B5"
+            android:textSize="18sp" android:textColorLink="#F8EDED" android:textColor="#F5EDED"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.425"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/check_campeon"/>
 </android.support.constraint.ConstraintLayout>

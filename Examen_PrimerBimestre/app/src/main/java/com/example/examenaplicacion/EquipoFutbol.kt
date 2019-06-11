@@ -2,31 +2,34 @@ package com.example.examenaplicacion
 
 import android.os.Parcel
 import android.os.Parcelable
+import android.app.PendingIntent.getActivity
+import android.content.Context
+import android.provider.Settings.System.getString
+import android.support.v4.content.res.TypedArrayUtils.getText
 import java.util.*
 
 class EquipoFutbol(
-    var idEquipo:Int?,
+    var idEquipo:Int,
     var nombre:String,
     var liga:String,
-    var fechaCreacion: Date,
+    var fechaCreacion: String,
     var numberCopasInternacionales:Int,
     var campeonActual:Boolean
     ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readValue(Int::class.java.classLoader) as? Int,
+        parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readSerializable() as Date,
+        parcel.readString(),
         parcel.readInt(),
         parcel.readByte() != 0.toByte()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeValue(idEquipo)
+        parcel.writeInt(idEquipo)
         parcel.writeString(nombre)
         parcel.writeString(liga)
-        parcel.writeSerializable(fechaCreacion)
+        parcel.writeString(fechaCreacion)
         parcel.writeInt(numberCopasInternacionales)
         parcel.writeByte(if (campeonActual) 1 else 0)
     }
@@ -45,6 +48,6 @@ class EquipoFutbol(
         }
     }
     override  fun toString():String{
-        return "{${nombre.toUpperCase()}}"
+        return "${nombre}"
     }
 }
