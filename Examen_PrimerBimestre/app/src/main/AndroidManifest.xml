@@ -9,6 +9,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".CrearJugadorActivity">
+        </activity>
+        <activity android:name=".GestionJugadoresActivity">
+        </activity>
+        <activity android:name=".ListaJugadoresActivity">
+        </activity>
+        <activity android:name=".GestionEquipoActivity">
+        </activity>
         <activity android:name=".CrearPapaActivity">
         </activity>
         <activity android:name=".ListaPapaActivity">

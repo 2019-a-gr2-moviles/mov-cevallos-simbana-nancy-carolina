@@ -5,11 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
 import android.support.design.widget.Snackbar
+import android.support.v4.content.ContextCompat.startActivity
 import android.view.View
-import com.example.ejemploparcelable.ListViewActivity
-import com.example.ejemploparcelable.R
-import com.example.ejemploparcelable.Usuario
-import com.example.ejemploparcelable.Mascota
+import com.example.ejemploparcelable.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 class MainActivity : AppCompatActivity() {
@@ -27,9 +25,14 @@ class MainActivity : AppCompatActivity() {
         btn_adapter.setOnClickListener {
             irAListView()
         }
-        Snackbar
+
+        btn_recycler_view.setOnClickListener {
+            iraRecycler()
+        }
+        /* Snackbar
             .make(view, "Gracias por crear un nuevo usuario", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
+            */
     }
     /*
     fun irAToast(){
@@ -39,7 +42,10 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intentExplicito)
     }
+
+
 */
+
     fun irAListView(){
         val intentExplicito = Intent(
             this,
@@ -74,6 +80,13 @@ class MainActivity : AppCompatActivity() {
             .make(view, texto, Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
 
+    }
+
+    fun iraRecycler(){
+        val intentExplicito=Intent(
+            this, ReciclerViewActivity::class.java
+        )
+        startActivity(intentExplicito)
     }
 
 

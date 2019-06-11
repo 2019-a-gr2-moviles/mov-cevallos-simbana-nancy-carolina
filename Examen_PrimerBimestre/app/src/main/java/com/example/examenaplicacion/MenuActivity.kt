@@ -12,7 +12,7 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-       usuario=intent.getStringExtra("usuario").toString()
+       //usuario=intent.getStringExtra("usuario").toString()
         btn_gestionPapas.setOnClickListener { gestionarPapa() }
         btn_crearPapa.setOnClickListener { crearPapa() }
 
@@ -20,11 +20,13 @@ class MenuActivity : AppCompatActivity() {
 
     fun gestionarPapa(){
         val intentGestion=Intent(this, ListaPapaActivity::class.java)
+        intentGestion.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity((intentGestion))
     }
 
     fun crearPapa(){
         val intentCrear=Intent(this, CrearPapaActivity::class.java)
+        intentCrear.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intentCrear)
     }
 }

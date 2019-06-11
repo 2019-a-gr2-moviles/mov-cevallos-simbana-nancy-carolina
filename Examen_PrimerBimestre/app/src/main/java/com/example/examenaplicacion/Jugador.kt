@@ -10,7 +10,7 @@ class Jugador (
     var nombreCamisate:String,
     var nombreCompletoJugador:String,
     var poderEspecialDos:String,
-    var fechaIngresoEquipo:Date,
+    var fechaIngresoEquipo:String,
     var goles:Int,
     var eqipoFutbolId:Int
 ) : Parcelable {
@@ -20,11 +20,11 @@ class Jugador (
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readSerializable()as Date,
+        parcel.readString(),
         parcel.readInt(),
         parcel.readInt()
-    ) {
-    }
+    )
+
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeValue(idJugadpr)
@@ -32,7 +32,7 @@ class Jugador (
         parcel.writeString(nombreCamisate)
         parcel.writeString(nombreCompletoJugador)
         parcel.writeString(poderEspecialDos)
-        parcel.writeSerializable(fechaIngresoEquipo)
+        parcel.writeString(fechaIngresoEquipo)
         parcel.writeInt(goles)
         parcel.writeInt(eqipoFutbolId)
     }
@@ -52,7 +52,8 @@ class Jugador (
     }
 
     override  fun toString():String{
-        return "{${nombreCompletoJugador.toUpperCase()}}"
+        return "${nombreCompletoJugador}"
     }
-
 }
+
+
