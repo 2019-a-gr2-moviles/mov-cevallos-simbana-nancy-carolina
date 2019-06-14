@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         btn_recycler_view.setOnClickListener {
             iraRecycler()
         }
+
+        btn_intentRespuesta.setOnClickListener {
+
+        }
         /* Snackbar
             .make(view, "Gracias por crear un nuevo usuario", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
@@ -89,6 +93,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+
+    fun iraIntentRespuesta(){
+        val intentRespuesta= Intent(
+            this,IntentRespuestaActivity::class.java
+        )
+        startActivity(intentRespuesta)
+    }
 
 
 
