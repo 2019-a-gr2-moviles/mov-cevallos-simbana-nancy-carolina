@@ -39,6 +39,9 @@ class AdaptadorPersona(
                 }
             accionButton.setOnClickListener {
                 nombreTextView.text="ME CAMBIARON!!"
+                //contexto.cambiarNombreTextView("¡WOOW!")
+
+                val nuvevasPersona= arrayListOf<Persona>()
             }
         }
     }
