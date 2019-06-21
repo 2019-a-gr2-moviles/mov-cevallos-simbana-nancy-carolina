@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_amigos"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="@string/title_amigos"/>
+
+    <item
+            android:id="@+id/navigation_chats"
+            android:icon="@drawable/ic_sms_black_24dp"
+            android:title="@string/title_chats"/>
+
+    <item
+            android:id="@+id/navigation_time"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="@string/title_time"/>
+
+    <item
+            android:id="@+id/navigation_llamada"
+            android:icon="@drawable/ic_call_black_24dp"
+            android:title="@string/title_llamadas"/>
+
+    <item
+            android:id="@+id/navigation_mas"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:title="@string/title_mas"/>
+
+</menu>
