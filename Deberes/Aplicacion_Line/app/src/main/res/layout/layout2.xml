@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:id="@+id/layout_mensajes">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+            <TextView
+                    android:text="txt_emisor"
+                    android:layout_width="251dp"
+                    android:layout_height="62dp" android:id="@+id/txt_recibido"
+                    android:gravity="center|right|left"
+                    android:layout_marginRight="0dp"
+                    android:radius="@android:dimen/thumbnail_width"
+                    android:background="@android:color/background_light"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/txt_hora_recibido" android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:lineSpacingExtra="8sp"
+                    android:gravity="bottom" android:layout_gravity="bottom" android:paddingBottom="25dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="66dp">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="66dp">
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/txt_visto" android:paddingTop="15dp"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/txt_hora_entregado"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="94dp"
+                    android:layout_height="50dp" android:id="@+id/txt_enviado" android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark" android:paddingBottom="10dp"
+                    android:textAlignment="gravity"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

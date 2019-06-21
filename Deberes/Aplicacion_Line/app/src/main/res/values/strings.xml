@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Line</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_amigos">Amigos</string>
+    <string name="title_chats">Chats</string>
+    <string name="title_time">Timeline</string>
+    <string name="title_llamadas">Llamadas</string>
+    <string name="title_mas">Más</string>
+</resources>
