@@ -17,19 +17,19 @@ class ReciclerViewActivity : AppCompatActivity() {
         // val recycler_view = rv_personas
         // val actividad = this
 
-        lista.add(Persona("Nancy", "1234543219"))
-        lista.add(Persona("Carolina", "7654367892"))
-        lista.add(Persona("Cevallos", "1789098765"))
+        lista.add(Persona("Adrian","171819134"))
+        lista.add(Persona("Vicente","0192839495"))
+        lista.add(Persona("Adrian","2003938182"))
 
-        iniciarRecylerView(lista, this, rv_personas)
+        iniciarRecyclerView(lista,this, rv_personas)
 
     }
 
-    fun iniciarRecylerView(
-        lista: List<Persona>,
-        actividad: ReciclerViewActivity,
-        recycler_view: RecyclerView
-    ) {
+
+    fun iniciarRecyclerView ( lista: List<Persona>,
+                              actividad: ReciclerViewActivity,
+                              recycler_view: RecyclerView){
+
         val adaptadorPersona = AdaptadorPersona(
             lista,
             actividad,
@@ -42,7 +42,10 @@ class ReciclerViewActivity : AppCompatActivity() {
         adaptadorPersona.notifyDataSetChanged()
     }
 
-    fun cambiarNombreTextView(texto: String) {
-        txv_titulo_rv.text = texto
+
+    fun cambiarNombreTextView (texto: String)
+    {
+        txt_Titulo_rv.text = texto
     }
+
 }
