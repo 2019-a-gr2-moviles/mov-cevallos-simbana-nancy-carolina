@@ -14,11 +14,11 @@ class ListViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list_view)
 
         val listaNombres = arrayListOf<String>()
-        listaNombres.add("Vicente")
-        listaNombres.add("Adrian")
+        listaNombres.add("Nancy")
         listaNombres.add("Carolina")
-        listaNombres.add("Johanna")
-        listaNombres.add("Felipe")
+        listaNombres.add("Cevallos")
+        listaNombres.add("Simbaña")
+        listaNombres.add("Maria")
 
         val adapter = ArrayAdapter(this,
             android.R.layout.simple_list_item_1,
