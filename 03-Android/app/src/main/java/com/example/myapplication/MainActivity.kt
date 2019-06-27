@@ -22,12 +22,14 @@ class MainActivity : AppCompatActivity() {
         btn_adapter.setOnClickListener {
             irAListView()
         }
+
         btn_recycler_view.setOnClickListener {
             irArecyclerView()
         }
         btn_intent_respuesta.setOnClickListener {
             irAIntentRespuesta()
         }
+
     }
 
 

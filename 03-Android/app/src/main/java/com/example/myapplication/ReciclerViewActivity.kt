@@ -17,9 +17,9 @@ class ReciclerViewActivity : AppCompatActivity() {
         // val recycler_view = rv_personas
         // val actividad = this
 
-        lista.add(Persona("Adrian", "171819134"))
-        lista.add(Persona("Vicente", "0192839495"))
-        lista.add(Persona("Carolina", "2003938182"))
+        lista.add(Persona("Nancy", "1234543219"))
+        lista.add(Persona("Carolina", "7654367892"))
+        lista.add(Persona("Cevallos", "1789098765"))
 
         iniciarRecylerView(lista, this, rv_personas)
 
