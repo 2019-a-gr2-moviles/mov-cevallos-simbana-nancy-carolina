@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import kotlinx.android.synthetic.main.activity_intent_respuesta.*
@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_http.setOnClickListener{
             irAConexionActividad()
+        }
+
+        btn_maps.setOnClickListener{
+            irAMapaActividad()
         }
 
     }
@@ -98,6 +102,14 @@ class MainActivity : AppCompatActivity() {
             ConexionHttpActivity::class.java
         )
         startActivity(intentExplicito)
+    }
+
+    fun irAMapaActividad(){
+        val intentMapa = Intent(
+            this,
+            MapsActivity::class.java
+        )
+        startActivity(intentMapa)
     }
 
 
