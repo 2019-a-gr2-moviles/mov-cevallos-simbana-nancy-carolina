@@ -3,6 +3,8 @@ package com.example.myapplication
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
+import kotlinx.android.synthetic.main.activity_intent_respuesta.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_parcelable.*
 import java.util.*
@@ -22,25 +24,19 @@ class MainActivity : AppCompatActivity() {
         btn_adapter.setOnClickListener {
             irAListView()
         }
-
         btn_recycler_view.setOnClickListener {
             irArecyclerView()
         }
-        btn_intent_respuesta.setOnClickListener {
+
+        btn_intent.setOnClickListener {
             irAIntentRespuesta()
         }
 
+        btn_http.setOnClickListener{
+            irAConexionActividad()
+        }
+
     }
-
-
-    fun irAIntentRespuesta(){
-        val intentExplicito = Intent(
-            this,
-            IntentRespuestaActivity::class.java
-        )
-        startActivity(intentExplicito)
-    }
-
 
     fun irArecyclerView(){
         val intentExplicito = Intent(
@@ -57,6 +53,15 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intentExplicito)
     }
+
+    fun irAIntentRespuesta(){
+        val intentExplicito = Intent(
+            this,
+            IntentRespuestaActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
 
     fun irAListView(){
         val intentExplicito = Intent(
@@ -86,6 +91,15 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun irAConexionActividad(){
+        val intentExplicito = Intent(
+            this,
+            ConexionHttpActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
 
 
 
