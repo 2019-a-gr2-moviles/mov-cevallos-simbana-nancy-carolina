@@ -9,6 +9,18 @@ module.exports = {
 
   attributes: {
 
+
+    nombre: {
+      type: 'string',
+    },
+    //configuracion del HIJO
+    fkUsuario:{            //Nombre del fk para la relacion
+      model: 'usuario',    //Nombre del modelo a relacionar
+      //required: true     //OPCIONAL -> Simepre ingresar el fk
+
+    }
+
+=======
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
@@ -22,6 +34,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
 
   },
 
