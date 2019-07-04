@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1561061742915,"updatedAt":1561061742915,"id":1,"_id":1}
+{"nombre":"Karen Morocho","cedula":"1717370975","username":"Washios","fechaNacimiento":"23/10/1995","sueldo":"5500","estaCasado":"false","latitudCasa":"1.22212","longitudCasa":"1.2262","tipoUsuario":"normal","correo":"wacho_jax@hotmail.com","createdAt":1561062005014,"updatedAt":1561062572743,"id":2,"_id":2}
+{"nombre":"Karen","cedula":"1717370975","username":"Karenss","fechaNacimiento":"23/10/1995","latitudCasa":"1.22212","longitudCasa":"1.2262","tipoUsuario":"normal","correo":"wacho_jax@hotmail.com","createdAt":1561062091931,"updatedAt":1561062091931,"id":3,"_id":3}

@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"nombre":"Limpieza Dental","kfUsuario":"1","createdAt":1561150012865,"updatedAt":1561150012865,"id":1,"_id":1}
+{"nombre":"Limpieza Dental","fkUsuario":"1","createdAt":1561150029224,"updatedAt":1561150029224,"id":2,"_id":2}
+{"nombre":"Limpieza Dental","fkUsuario":"0","createdAt":1561150412074,"updatedAt":1561150412074,"id":3,"_id":3}
