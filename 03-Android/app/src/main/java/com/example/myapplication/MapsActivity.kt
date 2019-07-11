@@ -11,10 +11,18 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(),
+    OnMapReadyCallback,
+    GoogleMap.OnCameraMoveStartedListener,
+        GoogleMap.OnCameraMoveListener,
+        GoogleMap.OnCameraIdleListener,
+        GoogleMap.OnPolylineClickListener,
+        GoogleMap.OnPolygonClickListener
+
+{
+
 
     private lateinit var mMap: GoogleMap
     private var tienePermisosLocalizacion=false
@@ -41,17 +49,56 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         establecerConfiguracionMapa(mMap)
+        establecerListenersMovimientoMapa(mMap)
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-0.210375, -78.488687)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,17f))
+        val foch=LatLng(-0.2039826,-78.4932267)
+        val titulo= "Plaza foch"
+        val zoom=17f
+
+        anadirMArcador(foch,titulo)
+        moverCamaraConZoom(foch,zoom)
+
+        val poliLineaUno=googleMap
+            .addPolyline(
+                PolylineOptions()
+                    .clickable(true)
+                    .add(
+                        LatLng(-0.210462, -78.493948),
+                        LatLng(-0.208218, -78.490163),
+                        LatLng(-0.208583, -78.488940),
+                        LatLng(-0.209377, -78.490303)
+                    )
+            )
+
+        val poligonoUno=googleMap
+            .addPolygon(
+                PolygonOptions()
+                    .clickable(true)
+                    .add(
+                        LatLng(-0.209431, -78.490078),
+                        LatLng(-0.208734, -78.488951),
+                        LatLng(-0.209431, -78.488286),
+                        LatLng(-0.210085, -78.489745)
+                    )
+            )
+        poligonoUno.fillColor=  -0xc771c4
     }
 
     fun establecerConfiguracionMapa(mapa:GoogleMap){
+        val contexto=this.applicationContext //guardamos el contexto de la actividad
         //para configurar un mapa es necesario primeramente fijar , habilitar y deshabilitar configuraciones
         with(mapa){//forma de ver si existe o no el mapa
             //this.->podemos agregar condiguraciones al mapara
-            mapa.isMyLocationEnabled=true
+            val permisoFineLocation =ContextCompat
+                .checkSelfPermission(
+                    contexto,
+                    //android.Manifest.permission.->se puede ver todos los permisos disponible
+                    android.Manifest.permission.ACCESS_FINE_LOCATION
+                )
+            val tienePermiso=permisoFineLocation== PackageManager.PERMISSION_GRANTED
+            if(tienePermiso){
+                mapa.isMyLocationEnabled=true
+            }
             this.uiSettings.isZoomControlsEnabled=true//para que el boton de zoom este habilitado
             uiSettings.isMyLocationButtonEnabled=true// no es necesario poner this
         }
@@ -81,4 +128,50 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
     }
+
+    fun anadirMArcador(latLng:LatLng, title:String){
+        mMap.addMarker(
+            MarkerOptions()
+                .position(latLng)
+                .title(title)
+
+        )
+    }
+
+    fun moverCamaraConZoom(latLng: LatLng,zoom:Float=10f){
+        mMap.moveCamera(
+            CameraUpdateFactory.newLatLngZoom(latLng,zoom)
+        )
+    }
+
+    fun establecerListenersMovimientoMapa(map:GoogleMap){
+        with(map){
+            setOnCameraIdleListener { this@MapsActivity }
+            setOnCameraMoveStartedListener { this@MapsActivity }
+            setOnCameraMoveListener { this@MapsActivity }
+            setOnPolygonClickListener { this@MapsActivity }
+            setOnPolylineClickListener { this@MapsActivity }
+        }
+    }
+
+    override fun onPolygonClick(p0: Polygon?) {
+        Log.i("map","Polygon ${p0.toString()}")
+    }
+
+    override fun onPolylineClick(p0: Polyline?) {
+        Log.i("map","Polyline ${p0.toString()}")
+    }
+
+    override fun onCameraIdle() {
+        Log.i("map","Estoy quieto")
+    }
+
+    override fun onCameraMove() {
+        Log.i("map","Me estyo moviendo")
+    }
+
+    override fun onCameraMoveStarted(p0: Int) {
+        Log.i("map","Me voy a empezar a mover")
+    }
+
 }
