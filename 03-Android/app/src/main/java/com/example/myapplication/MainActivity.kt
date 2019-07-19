@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         btn_maps.setOnClickListener{
             irAMapaActividad()
         }
+        btn_fragmentos.setOnClickListener {
+            irAFragmentos()
+        }
 
     }
 
@@ -112,6 +115,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentMapa)
     }
 
+
+    fun irAFragmentos(){
+        val intentFrangmentos = Intent(
+            this,
+            FragmentosActivity::class.java
+        )
+        startActivity(intentFrangmentos)
+    }
 
 
 
