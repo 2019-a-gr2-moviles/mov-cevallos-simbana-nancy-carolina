@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/text_view_idJugador" android:textColor="#00FFFFFF"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/text_view_nombreJugador" android:textAlignment="center"
+            android:textColor="#FD000000" android:textSize="20sp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/text_view_equipoId" android:textColor="#00FFFFFF"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/text_numCamiseta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:textColor="#C8000000"/>
+            <TextView
+                    android:text="@string/text_nombreCamiseta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView9" android:textColor="#C8000000"/>
+            <TextView
+                    android:text="@string/text_poder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView11" android:textColor="#C8000000"/>
+            <TextView
+                    android:text="@string/text_fechaIngreso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView13" android:textColor="#C8000000"/>
+            <TextView
+                    android:text="@string/text_goles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView14" android:textColor="#C8000000"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_view_numeroCamiseta"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_view_nombreCamiseta"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_view_poder"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_view_fechaIngreso"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/text_view_goles"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <Button
+                android:text="@string/btn_eliminar"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content" android:id="@+id/btn_eliminar_jugador" android:layout_weight="1"/>
+        <Button
+                android:text="@string/btn_actualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/btn_actualizar_jugador"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">EXAMEN_IIBIMESTRE</string>
+    <string name="text_usuario">Usuario</string>
+    <string name="text_nombreEquipo">Nombre</string>
+    <string name="text_liga">Liga</string>
+    <string name="text_fechaEquipo">Fecha creación</string>
+    <string name="text_numeroCopas">Copas</string>
+    <string name="check_campeon">Campeon</string>
+    <string name="text_numCamiseta">Número Camiseta</string>
+    <string name="text_nombreCamiseta">Nombre Camiseta</string>
+    <string name="text_nombreJugador">Nombre Jugador</string>
+    <string name="text_poder">Poder especial</string>
+    <string name="text_fechaIngreso">Fecha ingreso</string>
+    <string name="text_latitud">Latitud</string>
+    <string name="text_longitud">Longitud</string>
+    <string name="text_goles">Goles</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="btn_actualizar">Actualizar</string>
+    <string name="btn_gestionJugadores">Gestionar Jugadores</string>
+    <string name="btn_crearJugador">Crear Jugador</string>
+    <string name="btn_gestionPapas">Gestionar Equipo</string>
+    <string name="btn_crearPapa">Crear Equipo</string>
+    <string name="msg_ingreso">Bienvenido</string>
+    <string name="msg_guardado">Se ha guardado exitosamente</string>
+    <string name="msg_actualizado">Se ha editado exitosamente</string>
+    <string name="msg_eliminado">Se ha eliminado exitosamente</string>
+    <string name="tituloEquipo">Equipos</string>
+    <string name="tituloJugador">Jugadores</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
